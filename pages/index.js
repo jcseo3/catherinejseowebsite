@@ -73,14 +73,14 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/linkedin.png" alt="LinkedIn" className="logo" />
+          <img src="/linkedin.png" alt="LinkedIn" className="icon" />
         </a>
         <a
           href="https://www.instagram.com/catherineseojunghyun"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/instagram.jpeg" alt="Instagram" className="logo" />
+          <img src="/instagram.jpeg" alt="Instagram" className="icon" />
         </a>
       </footer>
 
@@ -204,8 +204,23 @@ export default function Home() {
             DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
         }
 
-        .logo {
+        .icon {
           height: 2em;
+        }
+
+        @media (max-width: 600px) {
+          .name {
+            font-size: 2rem;
+          }
+          .location {
+            font-size: 1.3rem;
+          }
+          .title {
+            font-size: 1rem;
+          }
+          .icon {
+            height: 1.5em;
+          }
         }
       `}</style>
 
