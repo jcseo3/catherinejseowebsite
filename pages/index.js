@@ -203,6 +203,10 @@ export default function Home() {
           font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
             DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
         }
+
+        .logo {
+          height: 2em;
+        }
       `}</style>
 
       <style jsx global>{`
