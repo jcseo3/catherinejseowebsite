@@ -1,6 +1,12 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
+  const [load, setLoad] = useState(false);
+  useEffect(() => {
+    setLoad(true);
+  }, []);
+
   return (
     <div className="container">
       <Head>
@@ -14,60 +20,15 @@ export default function Home() {
           Catherine J. Seo
           </h1>
         </div>
-        <div><h3 className="location">New York, NY</h3></div>
-        <div className="title">
-          Front-End Web Developer
+        <div className={load ? "show": "hide"}>
+          <h3 className="location">New York, NY</h3>
+          <div className="title">
+            Front-End Web Developer
+          </div>
         </div>
-
-        {/* <p className="description">
-          web developer 
-          
-          <br />
-          🎵 hummer<br />
-          fiction 📘<br />
-          <a href="travels">🗺️</a><br />
-          interior designer with great taste<br />
-          lover of stories<br />
-          korean history😍<br />
-          exceptionally talented gift giver<br />
-          random baker<br />
-          fat activist<br />
-          🎥<br />
-          quote collector <br/>
-        </p> */}
-        {/* Get started by editing <code>pages/index.js</code> */}
-        {/* <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div> */}
       </main>
 
-      <footer>
+      <footer className={load ? "show": "hide"}>
         <a
           href="https://www.linkedin.com/in/jcatherineseo"
           target="_blank"
@@ -173,6 +134,16 @@ export default function Home() {
           font-size: 1.3rem;
         }
 
+        .hide {
+          opacity: 0;
+        }
+
+        .show {
+          text-align: center;
+          opacity: 1;
+          transition: opacity 1s ease-in 2.5s;
+        }
+
         .typewriter h1 {
           overflow: hidden; /* Ensures the content is not revealed until the animation */
           border-right: 0.1em solid orange; /* The typwriter cursor */
@@ -180,7 +151,7 @@ export default function Home() {
           margin: 0 auto; /* Gives that scrolling effect as the typing happens */
           letter-spacing: 0.1em; /* Adjust as needed */
           
-          animation: typing 2.5s steps(30, end) .5s, blink-caret .75s step-end infinite;
+          animation: typing 2.5s steps(30, end) 0s, blink-caret .75s step-end infinite;
         }
 
         /* The typing effect */
