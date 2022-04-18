@@ -21,7 +21,7 @@ export default function Home() {
           </h1>
           <div className="skyline">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            viewBox="0 0 2625.221 688.421" enable-background="new 0 0 2625.221 688.421" xmlSpace="preserve">
+            viewBox="0 0 2625.221 688.421" enableBackground="new 0 0 2625.221 688.421" xmlSpace="preserve">
           <path d="M32.989,490.982h30.074v21.556h10.737l3.552-106.163h7.912v-2.099l2.018-2.018v-5.248h2.826v-5.328l2.382-2.382h14.814
             v3.189h4.521v1.776h4.521v3.391h5.005v6.136h8.477l-2.18,117.304h15.339v4.198h7.427l2.422-95.103h1.372v-1.938h2.422v-3.391h5.086
             v-6.62h3.714v-4.198l4.682-1.05v-2.341h13.402v3.068h7.831v4.037h2.826v-9.607h2.503v-16.792h-3.229v-38.267l15.904-2.422h2.18
@@ -192,7 +192,7 @@ export default function Home() {
           stroke-dashoffset: 12100;
           animation: dash 10s linear forwards;
           /*stroke: #FFB71A; */
-          stroke: #082F87;
+          stroke: gray;
         }
 
         @keyframes dash {
